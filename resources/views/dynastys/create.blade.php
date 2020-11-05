@@ -22,7 +22,10 @@
     </head>
     <body class="antialiased">
     <h1>這是預備顯示新增一筆朝代的表單的view</h1>
-
+    編號:{{$id}}<br/>
+    朝代 :{{$t_name}}<br/>
+    歷經時間(西元) :{{$vids}}<br/>
+    舊時首都 :{{$capital}}<br/>
     <a href="<?php echo route('antiques.index');?>">回到古物的View</a>
     </body>
 </html>

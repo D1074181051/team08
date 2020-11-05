@@ -23,6 +23,32 @@
     <body class="antialiased">
     <h1>這是預備顯示所有朝代的view</h1>
 
+    <table>
+        <tr>
+            <th>編號</th>
+            <th>朝代</th>
+            <th>經歷時間(西元)</th>
+            <th>舊時首都</th>
+        </tr>
+        @foreach($dynastys as $dynasty)
+            @if ($dynasty->vids > 1500)
+            <tr style="color: cyan">
+                <td>{{$dynasty->id}}</td>
+                <td>{{$dynasty->t_name}}</td>
+                <td>{{$dynasty->vids}}</td>
+                <td>{{$dynasty->capital}}</td>
+            </tr>
+            @else
+                <tr style="color: firebrick">
+                    <td>{{$dynasty->id}}</td>
+                    <td>{{$dynasty->t_name}}</td>
+                    <td>{{$dynasty->vids}}</td>
+                    <td>{{$dynasty->capital}}</td>
+                </tr>
+            @endif
+        @endforeach
+    </table>
+
     <a href="<?php echo route('antiques.index');?>">回到古物的View</a>
     </body>
 </html>

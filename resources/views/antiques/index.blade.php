@@ -23,6 +23,38 @@
     <body class="antialiased">
     <h1>這是預備顯示所有古物的view</h1>
 
-    <a href="<?php echo route('dynastys.index');?>">回到朝代的View</a>
+    <table>
+        <tr>
+            <th>編號</th>
+            <th>古物</th>
+            <th>朝代編號</th>
+            <th>收藏地(所在地)</th>
+            <th>長(以公尺為標準)</th>
+            <th>寬(以公尺為標準)</th>
+        </tr>
+        @foreach($antiques as $antique)
+            @if ($antique->dynasty_ID > 12)
+            <tr style="color: cyan">
+                <td>{{$antique->id}}</td>
+                <td>{{$antique->p_name}}</td>
+                <td>{{$antique->dynasty_ID}}</td>
+                <td>{{$antique->location}}</td>
+                <td>{{$antique->long}}</td>
+                <td>{{$antique->width}}</td>
+            </tr>
+            @else
+                <tr style="color: firebrick">
+                    <td>{{$antique->id}}</td>
+                    <td>{{$antique->p_name}}</td>
+                    <td>{{$antique->dynasty_ID}}</td>
+                    <td>{{$antique->location}}</td>
+                    <td>{{$antique->long}}</td>
+                    <td>{{$antique->width}}</td>
+                </tr>
+            @endif
+        @endforeach
+    </table>
+
+        <a href="<?php echo route('dynastys.index');?>">回到朝代的View</a>
     </body>
 </html>

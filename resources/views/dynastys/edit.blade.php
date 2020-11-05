@@ -22,7 +22,11 @@
     </head>
     <body class="antialiased">
     <h1>這是預備顯示修改一筆朝代的表單的view</h1>
-    這是顯示修改編號為{{$dynasty_id}}的朝代資料<br/>
+    這是顯示修改的朝代資料<br/>
+    編號:{{$id}}<br/>
+    朝代 :{{$t_name}}<br/>
+    歷經時間(西元) :{{$vids}}<br/>
+    舊時首都 :{{$capital}}<br/>
     <a href="<?php echo route('antiques.index');?>">回到古物的View</a>
     </body>
 </html>

@@ -22,7 +22,11 @@
     </head>
     <body class="antialiased">
     <h1>這是預備顯示新增一筆古物的表單的view</h1>
-
+    古物:{{$p_name}}<br/>
+    朝代編號:{{$dynasty_ID}}<br/>
+    收藏地(所在地):{{$location}}<br/>
+    長(以公尺為標準):{{$long}}<br/>
+    寬(以公尺為標準):{{$width}}<br/>
     <a href="<?php echo route('dynastys.index');?>">回到朝代的View</a>
     </body>
 </html>
