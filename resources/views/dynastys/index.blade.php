@@ -39,7 +39,7 @@
                 <td>{{$dynasty->capital}}</td>
             </tr>
             @else
-                <tr style="color: firebrick">
+                <tr style="color: antiquewhite">
                     <td>{{$dynasty->id}}</td>
                     <td>{{$dynasty->t_name}}</td>
                     <td>{{$dynasty->vids}}</td>
