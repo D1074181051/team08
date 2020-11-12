@@ -70,7 +70,7 @@ class DynastysTableSeeder extends Seeder
     }
     public function run()
     {
-        for ($i=0; $i<25; $i++){
+        for ($i=0; $i<30; $i++){
             $name = $this->generateRandomName();
             $vids = $this->generateRandomVids();
             $capital = $this->generateRandomCapital();

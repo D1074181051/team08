@@ -18,9 +18,9 @@ class DynastysController extends Controller
     {
         $dynasty = new Dynasty;
         $dynasty->id;
-        $dynasty->t_name = "維特爾斯巴赫王朝";
-        $dynasty->vids = "1308~1410";
-        $dynasty->capital = "維特爾斯巴赫城堡";
+        $dynasty->t_name = "無";
+        $dynasty->vids = "0000~1111";
+        $dynasty->capital = "無";
         $dynasty->save();
 
         return view('dynastys.create', $dynasty);
@@ -29,8 +29,8 @@ class DynastysController extends Controller
     public function  edit($id)
     {
         $temp = Dynasty::findOrFail($id);
-        $temp->t_name = "哈布斯堡王朝";
-        $temp->vids = "1273~1556";
+        $temp->t_name = "無";
+        $temp->vids = "1111~2222";
         $temp->capital = "無";
         $temp->save();
 
@@ -40,11 +40,7 @@ class DynastysController extends Controller
 
     public function  show($id)
     {
-        $temp = Dynasty::find($id);
-        if($temp == null)
-        {
-            return "no";
-        }
+        $temp = Dynasty::findOrFail($id);
         $tab = $temp->toArray();
         return view('dynastys.show', $tab);
     }

@@ -9,4 +9,11 @@ class Dynasty extends Model
 {
     use HasFactory;
     protected $table = "dynastys";
+    protected $fillable=[
+        't_name',
+        'vids',
+        'capital',
+        'created_at',
+        'updated_at'
+    ];
 }
