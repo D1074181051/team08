@@ -2,12 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28a548a6-7105-4650-adab-802afff7b810" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/app.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/footer.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AntiquesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AntiquesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DynastysController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DynastysController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Dynasty.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Dynasty.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/AntiquesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/AntiquesTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DynastysTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DynastysTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/antiques/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/antiques/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/antiques/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/antiques/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/antiques/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/antiques/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/antiques/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/antiques/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dynastys/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dynastys/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dynastys/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dynastys/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dynastys/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dynastys/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dynastys/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dynastys/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,6 +158,9 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\team08\resources\views" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\Antiquities\resources\views\antiques" />
       <recent name="C:\wamp64\www\Antiquities\resources\views\dynastys" />
@@ -178,7 +187,10 @@
       <workItem from="1603937845159" duration="840000" />
       <workItem from="1603940369952" duration="11269000" />
       <workItem from="1604556632472" duration="9950000" />
-      <workItem from="1605143210021" duration="2636000" />
+      <workItem from="1605143210021" duration="3119000" />
+      <workItem from="1605147912283" duration="859000" />
+      <workItem from="1605148812687" duration="45000" />
+      <workItem from="1605748003432" duration="6192000" />
     </task>
     <servers />
   </component>
