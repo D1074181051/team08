@@ -29,6 +29,7 @@ Route::get('dynastys/{id}/edit', [DynastysController::class, 'edit'])->where('id
 //檢視所有單一朝代資料
 Route::get('dynastys/{id}', [DynastysController::class, 'show'])->where('id','[0-9]+')->name('dynastys.show');
 
+Route::post('dynastys/store', [DynastysController::class, 'store'])->name('dynastys.store');
 
 //檢視所有古物資料
 Route::get('antiques',[AntiquesController::class, 'index'])->name('antiques.index');
@@ -41,3 +42,5 @@ Route::get('antiques/{id}/edit', [AntiquesController::class, 'edit'])->where('id
 
 //檢視所有單一古物資料
 Route::get('antiques/{id}', [AntiquesController::class, 'show'])->where('id','[0-9]+')->name('antiques.show');
+
+Route::post('antiques/store', [AntiquesController::class, 'store'])->name('antiques.store');

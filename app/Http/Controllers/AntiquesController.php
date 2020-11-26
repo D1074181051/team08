@@ -18,15 +18,7 @@ class AntiquesController extends Controller
 
     public function  create()
     {
-        $temp=Antique::create([
-            'p_name'=>'無',
-            'dynasty_ID'=>10,
-            'location'=>'無',
-            'long'=>187,
-            'width'=>155,
-            'created_at'=>Carbon::now(),
-            'updated_at'=>Carbon::now()]);
-        return view('antiques.create',$temp);
+        return view('antiques.create');
     }
 
     public function  edit($id)

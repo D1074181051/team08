@@ -2,18 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28a548a6-7105-4650-adab-802afff7b810" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/app.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/footer.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Antiquities.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Antiquities.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AntiquesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AntiquesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DynastysController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DynastysController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/antiques/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/antiques/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/antiques/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/antiques/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/antiques/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/antiques/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/antiques/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/antiques/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dynastys/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dynastys/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dynastys/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dynastys/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dynastys/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dynastys/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dynastys/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dynastys/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,6 +136,7 @@
       <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
       <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
       <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/vendor/laravelcollective/html" />
     </include_path>
   </component>
   <component name="ProjectId" id="1iaFlUA36xTOAiwRKtcmlBQZ1WG" />
@@ -190,7 +190,9 @@
       <workItem from="1605143210021" duration="3119000" />
       <workItem from="1605147912283" duration="859000" />
       <workItem from="1605148812687" duration="45000" />
-      <workItem from="1605748003432" duration="6192000" />
+      <workItem from="1605748003432" duration="6949000" />
+      <workItem from="1605772177254" duration="21000" />
+      <workItem from="1606353036921" duration="6721000" />
     </task>
     <servers />
   </component>
@@ -202,5 +204,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605145553534" />
+    <state x="68" y="142" width="1414" height="657" key="dock-window-1" timestamp="1606371244452">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="68" y="142" width="1414" height="657" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1606371244452" />
   </component>
 </project>

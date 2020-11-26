@@ -16,14 +16,7 @@ class DynastysController extends Controller
 
     public function  create()
     {
-        $dynasty = new Dynasty;
-        $dynasty->id;
-        $dynasty->t_name = "無";
-        $dynasty->vids = "0000~1111";
-        $dynasty->capital = "無";
-        $dynasty->save();
-
-        return view('dynastys.create', $dynasty);
+        return view('dynastys.create');
     }
 
     public function  edit($id)
@@ -43,5 +36,10 @@ class DynastysController extends Controller
         $temp = Dynasty::findOrFail($id);
         $tab = $temp->toArray();
         return view('dynastys.show', $tab);
+    }
+
+    public function  store()
+    {
+
     }
 }
