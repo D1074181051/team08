@@ -31,6 +31,11 @@ Route::get('dynastys/{id}', [DynastysController::class, 'show'])->where('id','[0
 
 Route::post('dynastys/store', [DynastysController::class, 'store'])->name('dynastys.store');
 
+Route::patch('dynastys/update/{id}', [DynastysController::class, 'update'])->name('dynastys.update');
+
+Route::delete('dynastys/delete/{id}', [DynastysController::class, 'destroy'])->where('id','[0-9]+')->name('dynastys.destroy');
+
+
 //檢視所有古物資料
 Route::get('antiques',[AntiquesController::class, 'index'])->name('antiques.index');
 
@@ -44,3 +49,8 @@ Route::get('antiques/{id}/edit', [AntiquesController::class, 'edit'])->where('id
 Route::get('antiques/{id}', [AntiquesController::class, 'show'])->where('id','[0-9]+')->name('antiques.show');
 
 Route::post('antiques/store', [AntiquesController::class, 'store'])->name('antiques.store');
+
+Route::patch('antiques/update/{id}', [AntiquesController::class, 'update'])->name('antiques.update');
+
+Route::delete('antiques/delete/{id}', [AntiquesController::class, 'destroy'])->where('id','[0-9]+')->name('antiques.destroy');
+
