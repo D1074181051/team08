@@ -18,38 +18,80 @@ class AntiquesController extends Controller
         return view('antiques.index', ['antiques'=> $antique]);
         */
 
-        $antiques = DB::table('antiques')
-            ->join('dynastys', 'antiques.dynasty_ID', '=', 'dynastys.id')
-            ->orderBy('antiques.id')
-            ->select(
-                'antiques.id',
-                'antiques.p_name',
-                'dynastys.t_name',
-                'antiques.location',
-                'antiques.long',
-                'antiques.width'
-            )->get();
-        return view('antiques.index', ['antiques' => $antiques]);
+        $antiques = Antique:: allData()->get();
+
+        $locations = Antique::allLocation()->get();
+        $data = [];
+        foreach ( $locations as $location)
+        {
+            $data["$location->location"] = $location->location;
+        }
+        return view('antiques.index', ['antiques' => $antiques, 'locations' => $data]);
+    }
+
+    public function  small()
+    {
+        $antiques = Antique:: small()->get();
+        $locations = Antique::allLocation()->get();
+        $data = [];
+        foreach ($locations as $location)
+        {
+            $data["$location->location"] = $location->location;
+        }
+        return view('antiques.index', ['antiques' => $antiques, 'locations' => $data]);
+    }
+
+    public function location(Request $request)
+    {
+        $antiques = Antique::location($request->input('pos'))->get();
+
+        $locations = Antique::allLocation()->get();
+        $data = [];
+        foreach ($locations as $location)
+        {
+            $data["$location->location"] = $location->location;
+        }
+        return view('antiques.index', ['antiques' => $antiques, 'locations' => $data]);
     }
 
     public function  create()
     {
-        return view('antiques.create');
+        $dynastys =DB::table('dynastys')
+            ->select('dynastys.id', 'dynastys.t_name')
+            ->orderBy('dynastys.id', 'asc')
+            ->get();
+
+        $data = [];
+        foreach ($dynastys as $dynasty)
+        {
+            $data[$dynasty->id] = $dynasty->t_name;
+        }
+        return view('antiques.create', ['dynastys' => $data]);
     }
 
     public function  edit($id)
     {
-        $temp = Antique::findOrFail($id);
-        $antique = $temp->toArray();
-        return view('antiques.edit', $antique);
+        $antique = Antique::findOrFail($id);
+        $dynastys =DB::table('dynastys')
+            ->select('dynastys.id', 'dynastys.t_name')
+            ->orderBy('dynastys.id', 'asc')
+            ->get();
+
+        $data = [];
+        foreach ($dynastys as $dynasty)
+        {
+            $data[$dynasty->id] = $dynasty->t_name;
+        }
+
+        return view('antiques.edit', ['antique' => $antique, 'dynastys' => $data]);
     }
 
     public function  show($id)
     {
-        $temp = Antique::findOrFail($id);
+        $antique = Antique::findOrFail($id);
+        $dynasty = Dynasty::findOrFail($antique->dynasty_ID);
 
-        $tab = $temp->toArray();
-        return view('antiques.show',$tab);//->with("antique_id" ,$id);
+        return view('antiques.show', ['antique' => $antique, 'dynasty_name' => $dynasty->t_name]);
     }
 
     public function  store(Request $request)

@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28a548a6-7105-4650-adab-802afff7b810" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/antiques/form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AntiquesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AntiquesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DynastysController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DynastysController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Antique.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Antique.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/antiques/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/antiques/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/antiques/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/antiques/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/antiques/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/antiques/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dynastys/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dynastys/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dynastys/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dynastys/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/antiques/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/antiques/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -152,15 +153,17 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\team08\resources\views" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\Antiquities\resources\views\antiques" />
       <recent name="C:\wamp64\www\Antiquities\resources\views\dynastys" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\team08\resources\views\antiques" />
+      <recent name="C:\wamp64\www\team08\resources\views" />
     </key>
   </component>
   <component name="RunManager">
@@ -190,7 +193,10 @@
       <workItem from="1605748003432" duration="6949000" />
       <workItem from="1605772177254" duration="21000" />
       <workItem from="1606353036921" duration="6721000" />
-      <workItem from="1606958687843" duration="11231000" />
+      <workItem from="1606958687843" duration="11232000" />
+      <workItem from="1607563190370" duration="7953000" />
+      <workItem from="1607579043762" duration="6673000" />
+      <workItem from="1607586867913" duration="299000" />
     </task>
     <servers />
   </component>
@@ -198,13 +204,25 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606964899844">
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607578354959">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606964899844" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607578354959" />
+    <state x="704" y="361" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1607578861295">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="704" y="361" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1607578861295" />
+    <state x="777" y="443" key="NewPhpFileDialog" timestamp="1607572019062">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="777" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607572019062" />
     <state x="68" y="142" width="1414" height="657" key="dock-window-1" timestamp="1606371244452">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="68" y="142" width="1414" height="657" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1606371244452" />
+    <state x="674" y="290" key="refactoring.ChangeSignatureDialog" timestamp="1607585680679">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="674" y="290" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607585680679" />
   </component>
 </project>

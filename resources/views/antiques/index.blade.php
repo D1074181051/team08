@@ -6,6 +6,14 @@
 
 @section('contents')
     <a style="color: fuchsia" href="{{route('antiques.create')}}">新增古物</a>
+    <a style="color: fuchsia" href="{{route('antiques.index')}}">所有古物</a>
+    <a style="color: fuchsia" href="{{route('antiques.small')}}">查詢小型古物</a>
+    <form action="{{ url('antiques/location') }}" method='POST'>
+        {!! Form::label('pos', '選取位置') !!}
+        {!! Form::select('pos', $locations, ['class' => 'form-control']) !!}
+        <input class="btn btn-default" type="submit" value="查詢" />
+        @csrf
+    </form>
     <table>
         <tr>
             <th>編號</th>

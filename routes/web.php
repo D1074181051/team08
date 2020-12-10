@@ -39,6 +39,12 @@ Route::delete('dynastys/delete/{id}', [DynastysController::class, 'destroy'])->w
 //檢視所有古物資料
 Route::get('antiques',[AntiquesController::class, 'index'])->name('antiques.index');
 
+//查詢小型古物資料
+Route::get('antiques/small',[AntiquesController::class, 'small'])->name('antiques.small');
+
+//選定收藏地查詢
+Route::post('antiques/location', [AntiquesController::class, 'location'])->name('antiques.location');
+
 //新增一筆古物資料
 Route::get('antiques/create',[AntiquesController::class, 'create'])->name('antiques.create');
 
