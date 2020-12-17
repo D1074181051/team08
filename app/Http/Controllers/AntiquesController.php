@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CreateAntiqueRequest;
 use App\Models\Antique;
 use App\Models\Dynasty;
 use Carbon\Carbon;
@@ -94,7 +95,7 @@ class AntiquesController extends Controller
         return view('antiques.show', ['antique' => $antique, 'dynasty_name' => $dynasty->t_name]);
     }
 
-    public function  store(Request $request)
+    public function  store(CreateAntiqueRequest $request)
     {
         $p_name = $request->input('p_name');
         $dynasty_ID = $request->input('dynasty_ID');
@@ -114,7 +115,7 @@ class AntiquesController extends Controller
         return redirect('antiques');
     }
 
-    public function  update($id, Request $request)
+    public function  update($id, CreateAntiqueRequest $request)
     {
         $antique = Antique::findOrFail($id);
 

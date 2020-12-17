@@ -5,6 +5,9 @@
 @section('theme', '修改一筆朝代資料')
 
 @section('contents')
+
+    @include('message.list')
+
     朝代編號:{{ $id }}<br/>
     {!! Form::open(['url' => 'dynastys/update/' .$id, 'method' => 'patch']) !!}
     <div class="form-group">

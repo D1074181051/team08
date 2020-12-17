@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CreateDynastyRequest;
 use App\Models\Antique;
 use App\Models\Dynasty;
 use Carbon\Carbon;
@@ -35,7 +36,7 @@ class DynastysController extends Controller
         return view('dynastys.show', $tab);
     }
 
-    public function  store(Request $request)
+    public function  store(CreateDynastyRequest $request)
     {
         $t_name = $request->input('t_name');
         $vids = $request->input('vids');
@@ -51,7 +52,7 @@ class DynastysController extends Controller
         return redirect('dynastys');
     }
 
-    public function  update($id, Request $request)
+    public function  update($id, CreateDynastyRequest $request)
     {
         $dynasty = Dynasty::findOrFail($id);
 

@@ -5,6 +5,9 @@
 @section('theme', '建立古物的表單')
 
 @section('contents')
+
+    @include('message.list')
+
     {!! Form::open(['url' => 'antiques/store']) !!}
 
     @include('antiques.form', ['submitButtonText' => "新增古物資料"])

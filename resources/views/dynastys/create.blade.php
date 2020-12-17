@@ -5,6 +5,9 @@
 @section('theme', '新增一筆朝代資料')
 
 @section('contents')
+
+    @include('message.list')
+
     {!! Form::open(['url' => 'dynastys/store']) !!}
     <div class="form-group">
         {!! Form::Label('t_name', '朝代名稱:') !!}
