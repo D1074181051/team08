@@ -16,8 +16,13 @@
     </div>
 
     <div class="form-group">
-        {!! Form::Label('vids', '歷經時間(西元):') !!}
-        {!! Form::text('vids', $vids, ['class' => 'form-control']) !!}
+        {!! Form::Label('s_time', '歷經時間(起)(西元):') !!}
+        {!! Form::text('s_time', $s_time, ['class' => 'form-control']) !!}
+    </div>
+
+    <div class="form-group">
+        {!! Form::Label('e_time', '歷經時間(迄)(西元):') !!}
+        {!! Form::text('e_time', $e_time, ['class' => 'form-control']) !!}
     </div>
 
     <div class="form-group">

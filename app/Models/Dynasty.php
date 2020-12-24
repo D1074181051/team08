@@ -11,9 +11,15 @@ class Dynasty extends Model
     protected $table = "dynastys";
     protected $fillable=[
         't_name',
-        'vids',
+        's_time',
+        'e_time',
         'capital',
         'created_at',
         'updated_at'
     ];
+
+    public function antiques()
+    {
+        return $this->hasMany('App\Models\Antique', 'dynasty_ID');
+    }
 }

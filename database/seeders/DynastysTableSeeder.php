@@ -32,9 +32,13 @@ class DynastysTableSeeder extends Seeder
         $name = $first_name . " ". $last_name;
         return $name;
     }
-    public function  generateRandomVids(){
-        $vids =rand(1000, 2000);
-        return $vids;
+    public function  generateRandom_s_time(){
+        $s_time =rand(1, 1000);
+        return $s_time;
+    }
+    public function  generateRandom_e_time(){
+        $e_time =rand(1001, 2000);
+        return $e_time;
     }
     public  function generateRandomCapital(){
         $capital = [
@@ -72,13 +76,15 @@ class DynastysTableSeeder extends Seeder
     {
         for ($i=0; $i<30; $i++){
             $name = $this->generateRandomName();
-            $vids = $this->generateRandomVids();
+            $s_time = $this->generateRandom_s_time();
+            $e_time = $this->generateRandom_e_time();
             $capital = $this->generateRandomCapital();
             $random_datatime = Carbon::now()->subMinutes(rand(1, 55));
 
             DB::table('dynastys')->insert([
                 't_name' => $name,
-                'vids' => $vids,
+                's_time' => $s_time,
+                'e_time' => $e_time,
                 'capital' => $capital,
                 'created_at' => $random_datatime,
                 'updated_at' => $random_datatime

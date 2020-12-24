@@ -19,8 +19,7 @@ class AntiquesController extends Controller
         return view('antiques.index', ['antiques'=> $antique]);
         */
 
-        $antiques = Antique:: allData()->get();
-
+        $antiques = Antique:: all();
         $locations = Antique::allLocation()->get();
         $data = [];
         foreach ( $locations as $location)

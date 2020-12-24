@@ -31,20 +31,22 @@ class DynastysController extends Controller
 
     public function  show($id)
     {
-        $temp = Dynasty::findOrFail($id);
-        $tab = $temp->toArray();
-        return view('dynastys.show', $tab);
+        $dynasty = Dynasty::findOrFail($id);
+        $antiques = $dynasty->antiques;
+        return view('dynastys.show', ['dynasty'=>$dynasty, 'antiques'=>$antiques]);
     }
 
     public function  store(CreateDynastyRequest $request)
     {
         $t_name = $request->input('t_name');
-        $vids = $request->input('vids');
+        $s_time = $request->input('s_time');
+        $e_time = $request->input('e_time');
         $capital = $request->input('capital');
 
         Dynasty::create([
             't_name' => $t_name,
-            'vids' => $vids,
+            's_time' => $s_time,
+            'e_time' => $e_time,
             'capital' => $capital,
             'created' => Carbon::now()
         ]);
@@ -57,7 +59,8 @@ class DynastysController extends Controller
         $dynasty = Dynasty::findOrFail($id);
 
         $dynasty->t_name = $request->input('t_name');
-        $dynasty->vids = $request->input('vids');
+        $dynasty->s_time = $request->input('s_time');
+        $dynasty->e_time = $request->input('e_time');
         $dynasty->capital = $request->input('capital');
         $dynasty->save();
 

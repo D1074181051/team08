@@ -16,7 +16,8 @@ class CreateDynastysTable extends Migration
         Schema::create('dynastys', function (Blueprint $table) {
             $table->id()->comment('編號');
             $table->string('t_name', 255)->comment('朝代');
-            $table->string('vids', 255)->comment('經歷時間(西元)');
+            $table->integer('s_time')->comment('經歷時間(起)(西元)');
+            $table->integer('e_time')->comment('經歷時間(迄)(西元)');
             $table->string('capital', 255)->comment('舊時首都');
             $table->timestamps();
         });

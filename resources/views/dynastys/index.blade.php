@@ -10,17 +10,31 @@
         <tr>
             <th>編號</th>
             <th>朝代</th>
-            <th>經歷時間(西元)</th>
+            <th>經歷時間(起)(西元)</th>
+            <th>經歷時間(迄)(西元)</th>
             <th>舊時首都</th>
             <th>操作1</th>
             <th>操作2</th>
         </tr>
         @foreach($dynastys as $dynasty)
-            @if ($dynasty->vids > 1500)
+            @if($dynasty->s_time < 0)
+                <!--{{$BC = "B.C."}}-->
+                <!--{{$dynasty->s_time *= -1}}-->
+            @else
+                {{$BC = ""}}
+            @endif
+            @if($dynasty->e_time < 0)
+                <!--{{$BC2 = "B.C."}}-->
+                <!--{{$dynasty->e_time *= -1}}-->
+                @else
+                    {{$BC2 = ""}}
+                @endif
+            @if ($dynasty->e_time > 1500)
             <tr style="color: darkviolet">
                 <td>{{$dynasty->id}}</td>
                 <td>{{$dynasty->t_name}}</td>
-                <td>{{$dynasty->vids}}</td>
+                <td>{{$BC.$dynasty->s_time}}</td>
+                <td>{{$BC2.$dynasty->e_time}}</td>
                 <td>{{$dynasty->capital}}</td>
                 <td><a href="{{route('dynastys.show', ['id' => $dynasty->id])}}">顯示</a></td>
                 <td><a href="{{ route('dynastys.edit', ['id'=>$dynasty->id])}}">修改</a></td>
@@ -36,7 +50,8 @@
                 <tr style="color: forestgreen">
                     <td>{{$dynasty->id}}</td>
                     <td>{{$dynasty->t_name}}</td>
-                    <td>{{$dynasty->vids}}</td>
+                    <td>{{$BC.$dynasty->s_time}}</td>
+                    <td>{{$BC2.$dynasty->e_time}}</td>
                     <td>{{$dynasty->capital}}</td>
                     <td><a href="{{route('dynastys.show', ['id'=>$dynasty->id])}}">顯示</a></td>
                     <td><a href="{{route('dynastys.edit', ['id'=>$dynasty->id])}}">修改</a></td>
