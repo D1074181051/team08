@@ -66,7 +66,7 @@ class AntiquesTableSeeder extends Seeder
     }
     public function run()
     {
-        for ($i=0; $i<30; $i++) {
+        for ($i=0; $i<100; $i++) {
             $name = $this->generateRandomName();
             $dynasty = $this->generateRandomDynatys();
             $location = $this->generateRandomLocation();

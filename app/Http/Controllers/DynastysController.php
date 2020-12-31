@@ -17,6 +17,57 @@ class DynastysController extends Controller
         return view('dynastys.index', ['dynastys'=>$dynasty]);
     }
 
+    public function api_dynastys()
+    {
+        return Dynasty::all();
+    }
+
+    public function api_update(Request $request)
+    {
+        $dynasty = Dynasty::find($request->input('id'));
+        if ($dynasty == null)
+        {
+            return response()->json([
+                'status' => 0,
+            ]);
+        }
+
+        $dynasty->t_name = $request->input('t_name');
+        $dynasty->s_time = $request->input('s_time');
+        $dynasty->e_time = $request->input('e_time');
+        $dynasty->capital = $request->input('capital');
+        if ($dynasty->save())
+        {
+            return response()->json([
+                'status' => 1,
+            ]);
+        } else {
+            return  response()->json([
+                'status' => 0,
+            ]);
+        }
+    }
+
+    public function api_delete(Request $request)
+    {
+        $dynasty = Dynasty::find($request->input('id'));
+
+        if ($dynasty == null)
+        {
+            return response()->json([
+                'status' => 0,
+            ]);
+        }
+
+        if ($dynasty->delete())
+        {
+            return response()->json([
+                'status' => 1,
+            ]);
+        }
+
+    }
+
     public function  create()
     {
         return view('dynastys.create');

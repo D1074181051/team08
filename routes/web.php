@@ -60,3 +60,4 @@ Route::patch('antiques/update/{id}', [AntiquesController::class, 'update'])->nam
 
 Route::delete('antiques/delete/{id}', [AntiquesController::class, 'destroy'])->where('id','[0-9]+')->name('antiques.destroy');
 
+Route::get('/getCSRFToken', function () { return csrf_token();});

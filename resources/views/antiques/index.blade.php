@@ -31,7 +31,7 @@
                 <tr style="color: darkblue">
                     <td>{{$antique->id}}</td>
                     <td>{{$antique->p_name}}</td>
-                    <td>{{$antique->dynasty->t_name}}</td>
+                    <td>{{$antique->dynasty['t_name']}}</td>
                     <td>{{$antique->location}}</td>
                     <td>{{$antique->long}}</td>
                     <td>{{$antique->width}}</td>
@@ -49,7 +49,7 @@
                 <tr style="color: firebrick">
                     <td>{{$antique->id}}</td>
                     <td>{{$antique->p_name}}</td>
-                    <td>{{$antique->dynasty->t_name}}</td>
+                    <td>{{$antique->dynasty['t_name']}}</td>
                     <td>{{$antique->location}}</td>
                     <td>{{$antique->long}}</td>
                     <td>{{$antique->width}}</td>

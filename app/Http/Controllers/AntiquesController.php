@@ -29,6 +29,58 @@ class AntiquesController extends Controller
         return view('antiques.index', ['antiques' => $antiques, 'locations' => $data]);
     }
 
+    public function api_antiques()
+    {
+        return Antique::all();
+    }
+
+    public function api_update(Request $request)
+    {
+        $antique = Antique::find($request->input('id'));
+        if ($antique == null)
+        {
+            return response()->json([
+                'status' => 0,
+            ]);
+        }
+
+        $antique->p_name = $request->input('p_name');
+        $antique->dynasty_ID = $request->input('dynasty_ID');
+        $antique->location = $request->input('location');
+        $antique->long = $request->input('long');
+        $antique->width = $request->input('width');
+        if ($antique->save())
+        {
+            return response()->json([
+                'status' => 1,
+            ]);
+        } else {
+            return  response()->json([
+                'status' => 0,
+            ]);
+        }
+    }
+
+    public function api_delete(Request $request)
+    {
+        $antique = Antique::find($request->input('id'));
+
+        if ($antique == null)
+        {
+            return response()->json([
+                'status' => 0,
+            ]);
+        }
+
+        if ($antique->delete())
+        {
+            return response()->json([
+                'status' => 1,
+            ]);
+        }
+
+    }
+
     public function  small()
     {
         $antiques = Antique:: small()->get();
