@@ -22,4 +22,10 @@ class Dynasty extends Model
     {
         return $this->hasMany('App\Models\Antique', 'dynasty_ID');
     }
+
+    public  function delete()
+    {
+        $this->antiques()->delete();
+        return parent::delete();
+    }
 }
