@@ -35,6 +35,7 @@ Route::patch('dynastys/update/{id}', [DynastysController::class, 'update'])->nam
 
 Route::delete('dynastys/delete/{id}', [DynastysController::class, 'destroy'])->where('id','[0-9]+')->name('dynastys.destroy');
 
+Route::post('dynastys/capital', [DynastysController::class, 'capital'])->name('antiques.capital');
 
 //檢視所有古物資料
 Route::get('antiques',[AntiquesController::class, 'index'])->name('antiques.index');

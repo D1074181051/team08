@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="28a548a6-7105-4650-adab-802afff7b810" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/CreateDynastyRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/CreateDynastyRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DynastysController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DynastysController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Dynasty.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Dynasty.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dynastys/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dynastys/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +197,8 @@
       <workItem from="1608179433095" duration="6395000" />
       <workItem from="1608772693974" duration="15288000" />
       <workItem from="1609377975462" duration="14312000" />
-      <workItem from="1609983329976" duration="5602000" />
+      <workItem from="1609983329976" duration="8185000" />
+      <workItem from="1610590395448" duration="5624000" />
     </task>
     <servers />
   </component>

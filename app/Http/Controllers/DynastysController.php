@@ -13,8 +13,14 @@ class DynastysController extends Controller
     //
     public function  index()
     {
-        $dynasty = Dynasty::all();
-        return view('dynastys.index', ['dynastys'=>$dynasty]);
+        $dynastys = Dynasty::all();
+        $capitals = Dynasty::allCapital()->get();
+        $data = [];
+        foreach ($capitals as $capital)
+        {
+            $data["$capital->capital"] = $capital->capital;
+        }
+        return view('dynastys.index', ['dynastys' => $dynastys, 'capitals' => $data]);
     }
 
     public function api_dynastys()
@@ -68,6 +74,19 @@ class DynastysController extends Controller
 
     }
 
+    public function capital(Request $request)
+    {
+        $dynastys = Dynasty::capital($request->input('pos'))->get();
+
+        $capitals = Dynasty::allCapital()->get();
+        $data = [];
+        foreach ($capitals as $capital)
+        {
+            $data["$capital->capital"] = $capital->capital;
+        }
+        return view('dynastys.index', ['dynastys' => $dynastys, 'capitals' => $data]);
+    }
+
     public function  create()
     {
         return view('dynastys.create');
@@ -84,6 +103,7 @@ class DynastysController extends Controller
     {
         $dynasty = Dynasty::findOrFail($id);
         $antiques = $dynasty->antiques;
+        //return $dynasty;
         return view('dynastys.show', ['dynasty'=>$dynasty, 'antiques'=>$antiques]);
     }
 

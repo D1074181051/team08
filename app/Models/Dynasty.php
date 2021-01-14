@@ -28,4 +28,16 @@ class Dynasty extends Model
         $this->antiques()->delete();
         return parent::delete();
     }
+
+    public function scopeAllCapital($query)
+    {
+        $query->select('capital')->groupBy('capital');
+    }
+
+
+    public function scopeCapital($query, $pos)
+    {
+        $query->where('capital', '=', $pos)
+            ->orderBy('dynastys.id');
+    }
 }

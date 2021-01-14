@@ -6,6 +6,12 @@
 
 @section('contents')
  <a style="color: salmon" href="{{route('dynastys.create')}}">新增朝代</a>
+ <form action="{{ url('dynastys/capital') }}" method='POST'>
+     {!! Form::label('pos', '選取首都') !!}
+     {!! Form::select('pos', $capitals, ['class' => 'form-control']) !!}
+     <input class="btn btn-default" type="submit" value="查詢" />
+     @csrf
+ </form>
     <table>
         <tr>
             <th>編號</th>
